@@ -21,7 +21,7 @@ const ResepForm = ({ onClose, onSuccess }) => {
     const konfirmasi = window.confirm('Yakin mau tambah resep ini?');
     if (!konfirmasi) return;
 
-    let resepId = null; // ✅ declare di luar try
+    let resepId = null;
 
     try {
       const resepRes = await axios.post("http://localhost:3000/api/resep", {

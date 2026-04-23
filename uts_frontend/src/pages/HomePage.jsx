@@ -59,10 +59,8 @@ const HomePage = () => {
         </button>
       </div>
 
-      {/* List Resep */}
       <ResepList resep={resepPaginated} onRefresh={fetchResep} />
 
-      {/* Pagination */}
       <div className="pagination">
         <button disabled={currentPage === 1} onClick={() => setCurrentPage(currentPage - 1)}>◀</button>
         {Array.from({ length: totalPage }, (_, i) => (
@@ -77,7 +75,6 @@ const HomePage = () => {
         <button disabled={currentPage === totalPage} onClick={() => setCurrentPage(currentPage + 1)}>▶</button>
       </div>
 
-      {/* Modal Tambah Resep */}
       {showModal && (
         <ResepForm
           onClose={() => setShowModal(false)}
